@@ -1,0 +1,314 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: cursive;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f2eadf;
+}
+.container{
+    position: relative;
+    width: 340px;
+    height: 550px;
+    background-color: #414141;
+    border-radius: 5px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+::-webkit-scrollbar{
+    width: 5px;
+}
+header{
+    position: relative;
+    background: #454545;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    color: wheat;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+}
+.action{
+    display: flex;
+    position: relative;
+    gap: 20px;
+}
+.action a{
+    color: wheat;
+    font-size: 15px;
+}
+.container1{
+    position: relative;
+    width: 350px;
+    height: 590px;
+    background-color: black;
+    padding: 0px 5px;
+    border-radius: 10px;
+}
+.cam{
+    margin-left: 30%;
+}
+.tt{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    background-color: #454545;
+    /* border: 1px solid white; */
+    border-radius: 5px 5px 0px 0px;
+}
+.tt1{
+    color: white;
+    font-size: 10px;
+}
+.tt2{
+    display: flex;
+    color: white;
+    position: relative;
+    font-size: 10px;
+}
+.tt2 a{
+    color: white;
+}
+.tab input{
+    visibility: hidden;
+    display: none;
+}
+.buttons{
+    position: relative;
+    display: flex;
+    background: #454545;
+    border-bottom: 1px solid black;
+}
+.buttons label{
+    width: 33%;
+    color: wheat;
+    text-align: justify;
+    padding: 5px 5px;
+    cursor: pointer;
+}
+.tab input:nth-child(1):checked ~ .buttons label:nth-child(1),
+.tab input:nth-child(2):checked ~ .buttons label:nth-child(2),
+.tab input:nth-child(3):checked ~ .buttons label:nth-child(3),
+.tab input:nth-child(4):checked ~ .buttons label:nth-child(4)
+{
+    opacity: 1;
+}
+.underline{
+    position: absolute;
+    left: 0;
+    bottom:0;
+    width: 20%;
+    height: 3px;
+    background: green;
+    transition: 0.5s;
+}
+.tab input:nth-child(1):checked ~ .buttons .underline{
+    left: 0;
+}
+.tab input:nth-child(2):checked ~ .buttons .underline{
+    left: 22%;
+}
+.tab input:nth-child(3):checked ~ .buttons .underline{
+    left: 49%;
+}
+.tab input:nth-child(4):checked ~ .buttons .underline{
+    left: 72%;
+}
+.content{
+    position: relative;
+    width: calc(350px * 4);
+    display: flex;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.content .box{
+    position: relative;
+    width: 350px;
+}
+.tab input:nth-child(1):checked ~ .content{
+    left: calc(350px * 0);
+}
+.tab input:nth-child(2):checked ~ .content{
+    left: calc(350px * -1);
+}
+.tab input:nth-child(3):checked ~ .content{
+    left: calc(350px * -2);
+}
+.tab input:nth-child(4):checked ~ .content{
+    left: calc(350px * -3);
+}
+.content .data{
+    position: relative;
+    width: 100%;
+    height: 510px;
+}
+.chatlist{
+    position: relative;
+    height: 100%;
+    overflow-y: auto;
+}
+.chatlist .block{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    padding: 2px 5px;
+}
+.imgbx1{
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.details{
+    position: relative;
+    width: 75%;
+}
+.listhead{
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+}
+.listhead p{
+    font-size: 12px;
+}
+.message{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.message p{
+    color: #f2eadf;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+}
+.message b{
+    background-color: green;
+    border-radius: 100%;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    font-size: 10px;
+}
+.plus{
+    position: absolute;
+    top: 38px;
+    left: 45px;
+    width: 22px;
+    height: 22px;
+    background: green;
+    text-align: center;
+    border-radius: 100%;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.l{
+    margin-left: 10px;
+    font-size: 12px;
+}
+.imgbx3{
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    border-style: dashed;
+    border-color: green;
+}
+.bbb{
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background: green;
+    color: wheat;
+    border: none;
+}
+.bbb2 .fa-solid{
+    width: 40px;
+    color: green;
+    background: #414141;
+}
+.bbb2{
+    background: #414141;
+    border: none;
+}
+.messagecall .fa-solid{
+    color: green;
+    rotate: 45deg;
+}
+.messagecall p{
+    color: white;
+    font-size: 14px;
+}
+.quickbtn{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    z-index: 10000;
+}
+.quickbtn .btn{
+    background: green;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: wheat;
+    font-size: 18px;
+    cursor: pointer;
+    display: none;
+}
+.tab input:nth-child(1):checked ~ .quickbtn .btn:nth-child(1){
+    display: flex;
+    background-color: #414141;
+}
+.tab input:nth-child(2):checked ~ .quickbtn .btn:nth-child(2){
+    display: flex;
+}
+.tab input:nth-child(3):checked ~ .quickbtn .btn:nth-child(3){
+    display: flex;
+}
+.tab input:nth-child(4):checked ~ .quickbtn .btn:nth-child(4){
+    display: flex;
+}
+.quickbtn .btn .pencil{
+    position: absolute;
+    top: -50px;
+    width: 40px;
+    height: 40px;
+    background: #54616c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
+.quickbtn .btn .plusss{
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 100px;
+    /* border: 1px solid black; */
+    margin-top: -10px;
+    margin-left: -8px;
+}
