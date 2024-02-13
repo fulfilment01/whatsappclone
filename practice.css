@@ -1,0 +1,29 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: aqua;
+}
+.container{
+    position: relative;
+    width: 400px;
+    height: 600px;
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+::-webkit-scrollbar{
+    width: 5px;
+    background: black;
+}
+.tab input{
+    visibility: hidden;
+    display: none;
+}
+.button label{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
